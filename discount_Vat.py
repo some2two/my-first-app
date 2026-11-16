@@ -11,13 +11,12 @@ sale_price = price * discount / 100
 vat = (price - sale_price) * 0.07
 net_price = (price - sale_price) + vat
 
-
+show_price = f"• ราคาสินค้า: {price:.2f} บาท"
+show_discount = f"• เปอร์เซ็นต์ส่วนลด: {discount:.0f}%"
 show_sale_price = f"• ส่วนลด ({discount:.0f}%): -{sale_price:.2f} บาท"
 show_vat = f"• ภาษีมูลค่าเพิ่ม (VAT 7%): +{vat:.2f} บาท"
 show_net_price = f"• ราคาสุทธิที่ต้องจ่าย: {net_price:.2f} บาท"
 
-st.write(show_price)
-st.write(show_discount)
 st.write(show_sale_price)
 st.write(f"• ราคาหลังหักส่วนลด: {price - sale_price:.2f} บาท")
 st.write(show_vat)
